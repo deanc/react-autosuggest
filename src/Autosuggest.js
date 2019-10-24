@@ -80,6 +80,7 @@ export default class Autosuggest extends Component {
     },
     focusInputOnSuggestionClick: PropTypes.bool,
     highlightFirstSuggestion: PropTypes.bool,
+    enableEnsureHighlightedItemIsVisible: PropTypes.bool,
     theme: PropTypes.object,
     id: PropTypes.string
   };
@@ -91,6 +92,7 @@ export default class Autosuggest extends Component {
     multiSection: false,
     focusInputOnSuggestionClick: true,
     highlightFirstSuggestion: false,
+    enableEnsureHighlightedItemIsVisible: true,
     theme: defaultTheme,
     id: '1'
   };
@@ -515,7 +517,8 @@ export default class Autosuggest extends Component {
       theme,
       getSuggestionValue,
       alwaysRenderSuggestions,
-      highlightFirstSuggestion
+      highlightFirstSuggestion,
+      enableEnsureHighlightedItemIsVisible
     } = this.props;
     const {
       isFocused,
@@ -751,6 +754,9 @@ export default class Autosuggest extends Component {
         getSectionItems={getSectionSuggestions}
         highlightedSectionIndex={highlightedSectionIndex}
         highlightedItemIndex={highlightedSuggestionIndex}
+        enableEnsureHighlightedItemIsVisible={
+          enableEnsureHighlightedItemIsVisible
+        }
         inputProps={autowhateverInputProps}
         itemProps={this.itemProps}
         theme={mapToAutowhateverTheme(theme)}
