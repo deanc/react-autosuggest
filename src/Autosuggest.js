@@ -664,7 +664,11 @@ export default class Autosuggest extends Component {
 
             const highlightedSuggestion = this.getHighlightedSuggestion();
 
-            if (isOpen && !alwaysRenderSuggestions) {
+            if (
+              isOpen &&
+              !alwaysRenderSuggestions &&
+              highlightedSuggestion != null
+            ) {
               this.closeSuggestions();
             }
 
