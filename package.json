@@ -1,6 +1,6 @@
 {
   "name": "@deanc/react-autosuggest",
-  "version": "9.4.6",
+  "version": "9.4.7",
   "description": "WAI-ARIA compliant React autosuggest component",
   "main": "dist/index.js",
   "repository": {
